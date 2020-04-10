@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IndiaFragment">
+
+    <com.anychart.AnyChartView
+        android:id="@+id/any_chart_view_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="INDIA COVID-19 LIVE DATA"
+                android:textColor="#757575"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/total_cnf_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="CONFIRMED"
+                android:textColor="#ef9a9a"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/cnf_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="1220"
+                android:textColor="@color/red_active"
+
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/total_cnf_heading"
+                app:layout_constraintStart_toStartOf="@+id/total_cnf_heading"
+                app:layout_constraintTop_toBottomOf="@+id/total_cnf_heading" />
+
+            <TextView
+                android:id="@+id/recovered_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="RECOVERED"
+                android:textColor="#a5d6a7"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/total_cnf_heading"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/recovered_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="120"
+                android:textColor="#4caf50"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/recovered_heading"
+                app:layout_constraintStart_toStartOf="@+id/recovered_heading"
+                app:layout_constraintTop_toBottomOf="@+id/recovered_heading" />
+
+            <TextView
+                android:id="@+id/death_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="70dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="DEATHS"
+                android:textColor="#bdbdbd"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/recovered_heading"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/death_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="29"
+                android:textColor="#757575"
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/death_heading"
+                app:layout_constraintStart_toStartOf="@+id/death_heading"
+                app:layout_constraintTop_toBottomOf="@+id/death_heading" />
+
+            <TextView
+                android:id="@+id/goto_Listview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="TAP TO SEE THIS TALLY AS LIST"
+                app:layout_constraintBottom_toTopOf="@+id/textView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="TAP ANY AREA IN MAP FOR STATE BASED DETAIL"
+                android:textColor="#bdbdbd"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.anychart.AnyChartView>
+
+</FrameLayout>

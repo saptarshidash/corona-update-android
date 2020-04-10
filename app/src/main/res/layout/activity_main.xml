@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cmf_bold"
+            android:text="Covid-Updates"
+            android:textColor="@color/greydark"
+
+            android:textSize="20dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+        android:id="@+id/navBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/l_item_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_active="true"
+            app:bt_colorActive="@color/grey_active"
+            app:bt_colorInactive="@color/grey_inactive"
+            app:bt_icon="@drawable/ic_tips"
+            app:bt_iconHeight="35dp"
+            app:bt_iconWidth="35dp"
+            app:bt_shape="@drawable/transition_background_drawable_tips"
+            app:bt_title="Tips"
+            app:bt_titleSize="17dp" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/l_item_worldwide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            app:bt_badgeBackgroundColor="@color/green_active"
+            app:bt_colorActive="@color/grey_active"
+            app:bt_colorInactive="@color/grey_inactive"
+            app:bt_icon="@drawable/ic_world"
+            app:bt_iconHeight="30dp"
+            app:bt_iconWidth="30dp"
+            app:bt_shape="@drawable/transition_background_drawable_worldwide"
+            app:bt_showShapeAlways="false"
+            app:bt_title="Worldwide"
+            app:bt_titleSize="17dp" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/messages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            app:bt_badgeBackgroundColor="@color/green_active"
+            app:bt_colorActive="@color/grey_active"
+            app:bt_colorInactive="@color/grey_inactive"
+            app:bt_icon="@drawable/ic_country"
+            app:bt_iconHeight="35dp"
+            app:bt_iconWidth="35dp"
+            app:bt_shape="@drawable/transition_background_drawable_country"
+            app:bt_title="Country Based"
+            app:bt_titleSize="17dp" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            app:bt_badgeBackgroundColor="@color/green_active"
+            app:bt_colorActive="@color/grey_active"
+            app:bt_colorInactive="@color/grey_inactive"
+            app:bt_icon="@drawable/ic_india"
+            app:bt_iconHeight="30dp"
+            app:bt_iconWidth="30dp"
+            app:bt_shape="@drawable/transaction_background_drawable_india"
+            app:bt_title="India"
+            app:bt_titleSize="17dp" />
+
+    </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+
+    <RelativeLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mainToolbar"
+        android:layout_marginBottom="60dp"
+        >
+
+    </RelativeLayout>
+
+</RelativeLayout>
